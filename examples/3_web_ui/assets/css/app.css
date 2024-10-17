@@ -1,0 +1,151 @@
+:root {
+    --bg-color: rgb(255, 255, 255);
+    --bg-pane: rgb(248, 248, 248);
+    --fg-color: rgb(94, 96, 95);
+    --fg-light: rgb(233, 233, 233);
+    --fg-pale-red: rgb(227, 131, 129);
+    --fg-blue: rgb(117, 146, 178);
+
+    --result-bg-color: rgb(87, 185, 142);
+    --result-fg-color: rgb(248, 248, 248);
+    --score-bg-color: rgb(3, 138, 167);
+    --score-fg-color: rgb(248, 248, 248);
+
+    --font-size: 15px;
+    --page-padding: 0.5rem;
+    --input-padding: 0.5rem;
+
+    --input-border: 1px solid rgb(223, 223, 223);
+    --input-outline: 1px solid var(--bg-pane);
+
+    --font-size: 15px;
+    --page-padding: 0.5rem;
+    --input-padding: 0.5rem;
+
+    --radius: 5px;
+
+    --logo-height: 125px;
+}
+
+html, body {
+    background: var(--bg-color);
+    color: var(--fg-color);
+    font-family: arial, sans-serif !important;
+    font-size: var(--font-size);
+
+    line-height: 1.5;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+hr {
+    border-top: 1px dotted var(--bg-pane);
+    width: 100%;
+}
+
+textarea {
+    outline: var(--input-outline);
+    padding: var(--input-padding);
+    border: var(--input-border);
+    border-radius: var(--radius);
+    resize: none;
+    width: 100%;
+}
+
+button {
+    background: var(--fg-pale-red);
+    color: var(--fg-light);
+    border-radius: var(--radius);
+    padding: var(--input-padding);
+    border: var(--input-border);
+    cursor: pointer;
+    outline: 0;
+}
+
+button:hover {
+    filter: brightness(125%);
+}
+
+button:active {
+    filter: brightness(85%);
+}
+
+button.app-example {
+    background: var(--fg-blue);
+}
+
+.app-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+}
+
+.app-logo {
+    height: var(--logo-height);
+    padding: var(--page-padding);
+    padding-top: 5rem;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 600px;
+    height: 100%;
+    margin-top: calc(-1 * var(--logo-height));
+
+}
+
+.app-content > * + * {
+    margin-top: 0.5rem;
+}
+
+.app-label {
+    text-align: left;
+    width: 100%;
+    font-weight: bold;
+}
+
+.app-result {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.app-result-item {
+    border-radius: var(--radius);
+    background: var(--result-bg-color);
+    color: var(--result-fg-color);
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.85em;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-result-item-score {
+    border-radius: var(--radius);
+    background: var(--score-bg-color);
+    color: var(--score-fg-color);
+    padding: 0.15rem;
+    font-size: 0.75em;
+    margin-left: 1rem;
+}
+
+.app-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+
+    <title>temibox</title>
+    <link rel="icon" href="/assets/img/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <script language="javaScript" src="/assets/js/app.js" ></script>
+
+</head>
+<body>
+    <div class="app-page">
+        <div class="app-header">
+            <img src="assets/img/logo.png" class="app-logo">
+        </div>
+
+        <div class="app-content">
+            <h3>Naive keyword extractor (cosine-similarity based token selection)</h3>
+            <div class="app-label">Title:</div>
+            <textarea class="app-input" rows="1" placeholder="Text" id="app-input-title"></textarea>
+            <div class="app-label">Text:</div>
+            <textarea class="app-input" rows="15" placeholder="Text" id="app-input-text"></textarea>
+            <div class="app-toolbar">
+                <div>
+                    <button class="app-example" onClick="load_example(1);">Example 1</button>
+                    <button class="app-example" onClick="load_example(2);">Example 2</button>
+                    <button class="app-example" onClick="load_example(3);">Example 3</button>
+                </div>
+                <button class="app-button" onClick="predict();">Extract keywords</button>
+            </div>
+
+            <hr>
+            <div class="app-result" id="app-results"></div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function(){load_example(1)};
+</script>
+
+</html>

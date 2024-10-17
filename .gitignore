@@ -1,0 +1,8 @@
+*.pyc
+__pycache__
+examples/3_web_ui/export
+.coverage
+.coveragerc
+.idea/
+_data/
+temibox.egg-info/
